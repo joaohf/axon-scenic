@@ -35,9 +35,8 @@ environment :dev do
 end
 
 environment :prod do
+  # MIX_TARGET_INCLUDE_ERTS is set by meta-erlang/classes/mix.bbclass
   set include_erts: System.get_env("MIX_TARGET_INCLUDE_ERTS")
-  #set include_erts: "/home/joaohf/work/opensource/meta/meta-erlang/build/tmp/work/i586-poky-linux/axon-scenic/0.1.0-git999-r0/recipe-sysroot/usr/lib/erlang"
-  #set include_erts: false
   set include_src: false
   set cookie: :"d.K@rG|YpY`|?i&]Fsdljji)JMhk)%j)}f|Y6cquU!He<]u=sHp`.o2p[I3ee]gD"
   set vm_args: "rel/vm.args"
